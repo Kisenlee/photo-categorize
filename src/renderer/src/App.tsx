@@ -412,12 +412,12 @@ export default function App(): React.JSX.Element {
         if (!event.repeat) void runConfirm()
         return
       }
-      if (event.key === 'ArrowLeft') {
+      if (event.key === 'ArrowLeft' || key === 'a') {
         event.preventDefault()
         step(-1)
         return
       }
-      if (event.key === 'ArrowRight') {
+      if (event.key === 'ArrowRight' || key === 'd') {
         event.preventDefault()
         step(1)
         return
@@ -659,6 +659,26 @@ export default function App(): React.JSX.Element {
               />
             )}
           </div>
+          {total > 0 && (
+            <div className="filmstrip">
+              {Array.from({ length: 11 }, (_, k) => index - 5 + k).map((i) => {
+                const img = images[i]
+                if (!img) return <div key={`empty-${i}`} className="film-cell empty" />
+                return (
+                  <button
+                    key={img.path}
+                    type="button"
+                    className={`film-cell${i === index ? ' current' : ''}`}
+                    title={`${i + 1}. ${img.name}`}
+                    disabled={busy}
+                    onClick={() => setIndex(i)}
+                  >
+                    <img src={toMediaUrl(img.path)} alt="" loading="lazy" decoding="async" draggable={false} />
+                  </button>
+                )
+              })}
+            </div>
+          )}
           {busy && <div className="busy-overlay">{t.processing}</div>}
         </section>
 

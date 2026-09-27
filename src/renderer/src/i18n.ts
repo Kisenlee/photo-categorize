@@ -67,7 +67,7 @@ const zh = {
   bindWaiting: '…',
   bindHint: '点击后按 1–0 / W S Z X C 绑定；再点清除',
   shortcutSpace: '空格 — 复类：复制到已勾选分类并进入下一张；无勾选（或单类）时跳过',
-  shortcutArrows: '← / → — 上一张 / 下一张',
+  shortcutArrows: 'A / ← — 上一张；D / → — 下一张',
   shortcutQ: 'Q — 单类模式',
   shortcutE: 'E — 复类模式',
   shortcutF: 'F — 切换收藏（分类时额外复制到目标下 Favs）',
@@ -141,7 +141,7 @@ const en: Messages = {
   bindHint: 'Click, then press 1–0 / W S Z X C to bind; click again to clear',
   shortcutSpace:
     'Space — Multi: copy into checked categories and go next; skip if none checked (or in single mode)',
-  shortcutArrows: '← / → — Previous / next image',
+  shortcutArrows: 'A / ← — Previous image; D / → — Next image',
   shortcutQ: 'Q — Single mode',
   shortcutE: 'E — Multi mode',
   shortcutF: 'F — Toggle favorite (also copy into target/Favs on classify)',

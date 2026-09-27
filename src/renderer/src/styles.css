@@ -293,6 +293,51 @@ input {
   user-select: none;
 }
 
+.filmstrip {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 10px;
+  height: 84px;
+}
+
+.film-cell {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.12s, border-color 0.12s;
+}
+
+.film-cell:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.film-cell.current {
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.film-cell.empty {
+  background: transparent;
+  border-style: dashed;
+  opacity: 0.25;
+  cursor: default;
+}
+
+.film-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .image-empty {
   color: var(--text-muted);
   text-align: center;

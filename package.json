@@ -1,6 +1,6 @@
 {
   "name": "photo-classifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Windows desktop helper for classifying local / NAS photos",
   "main": "./out/main/index.js",
   "author": "photo-classifier",
